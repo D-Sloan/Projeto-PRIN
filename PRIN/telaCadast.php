@@ -59,26 +59,26 @@
         <div class="card card-signin my-5"> 
           <div class="card-body">
             <h5 class="card-title text-center">Cadastrar</h5>
-            <form action="teste.php" class="form-signin" method="GET" >
+            <form action="teste.php" class="form-signin" method="POST" >
 
               <div class="form-label-group">
-                <input type="name" id="inputName" class="form-control" placeholder="Nome" required autofocus>
+                <input type="text" id="inputName" class="form-control" placeholder="Nome" name="NameRegister" required autofocus>
+                <label for="inputName"></label>
+              </div>
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" name="EmailRegister" required autofocus>
+                <label for="inputEmail"></label>
+              </div>
+              <div class="form-label-group">
+                <input type="number" id="inputMatric" class="form-control" placeholder="Matricula" name="MatricRegister" required autofocus>
                 <label for="inputMatric"></label>
               </div>
               <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" required autofocus>
-                <label for="inputMatric"></label>
+                <input type="bynber" id="inputCPF" class="form-control" placeholder="CPF" name="CpfRegister" required autofocus>
+                <label for="inputCPF"></label>
               </div>
               <div class="form-label-group">
-                <input type="number" id="inputMatric" class="form-control" placeholder="Matricula" required autofocus>
-                <label for="inputMatric"></label>
-              </div>
-              <div class="form-label-group">
-                <input type="bynber" id="inputCPF" class="form-control" placeholder="CPF" required autofocus>
-                <label for="inputMatric"></label>
-              </div>
-              <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Senha" name="PassRegister" required>
                 <label for="inputPassword"></label>
               </div>
 
