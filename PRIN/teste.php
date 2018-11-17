@@ -6,9 +6,11 @@
 	$Email = $_POST['EmailRegister'];
 	$Senha = $_POST['PassRegister'];
 
-	$con = mysqli_connect('localhost','root','');
+	$conn = mysqli_connect("localhost", "root", "", "teste");
+	mysqli_query($conn,"CREATE TABLE nomes (nome varchar(50));");
+	mysqli_query($conn,"INSERT INTO nomes (nome) VALUES('$Name')");
 
-	mysqli_select_db($con,'teste');
+
 
 
 
