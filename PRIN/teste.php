@@ -19,9 +19,14 @@
 	/*
 	DEFINIÇÃO DA CHAVE PRIMÁRIA
 	$conn = mysqli_connect("localhost", "root", "", "PRIN");
-	mysqli_query($conn,"ALTER TABLE User(ADD PRIMARY KEY(Cpf)) ");
+	mysqli_query($conn,"ALTER TABLE User ADD PRIMARY KEY(Cpf) ");
 	mysqli_close($conn);
 	*/
-	
+
+	/*
+	$conn = mysqli_connect("localhost", "root", "", "PRIN");
+	mysqli_query($conn,"ALTER TABLE user ADD Tipo int(1) ");
+	mysqli_close($conn);
+	*/
 
 ?>
