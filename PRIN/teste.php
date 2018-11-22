@@ -7,6 +7,10 @@
 	$Senha = $_POST['PassRegister'];
 	$tipo = (int) $_POST['exampleRadios'];
 
+	$teste = new Banco();
+
+	$teste->realizarCadastro($Matric, $Name, $CPF, $Email, $Senha, $tipo);
+
 	
 
 

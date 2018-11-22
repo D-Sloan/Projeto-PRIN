@@ -12,6 +12,8 @@ class Banco{
 		mysqli_close($conn);
 		echo "Cheguei até aqui";
 	}
+
+
 	function verificarCadastro($Cpf){
 
 			$conn = mysqli_connect("localhost", "root", "", "prin");
@@ -28,6 +30,24 @@ class Banco{
 	}
 
 	public function realizarCadastro($Matricula, $Name, $Cpf, $Email, $Senha,$Tipo){
+			if($Tipo == 4 && $Matricula == Null){
+
+				?>
+				<script>
+    			alert("Por favor, informe a matriicula caso seja aluno!");
+    			location = "telaCadast.php";
+				</script>
+				<?php
+				
+			}
+			if($this->verificarCadastro($Cpf)){
+				?>
+				<script>
+    			alert("CPF Ja Cadastrado");
+    			location = "telaCadast.php";
+				</script>
+				<?php
+			}
 
 	}
 
