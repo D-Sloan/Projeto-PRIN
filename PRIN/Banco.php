@@ -11,8 +11,10 @@ class Banco{
 		mysqli_close($conn);
 		echo "Cheguei até aqui";
 	}
-	function verificarCadastro(){
+	function verificarCadastro($Cpf, $Email){
+			
 		
+			
 	}
 
 }
