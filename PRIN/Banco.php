@@ -34,7 +34,7 @@ class Banco{
 
 				?>
 				<script>
-    			alert("Por favor, informe a matriicula caso seja aluno!");
+    			alert("Por favor, informe a matriicula!");
     			location = "telaCadast.php";
 				</script>
 				<?php
@@ -43,7 +43,7 @@ class Banco{
 			if($this->verificarCadastro($Cpf)){
 				?>
 				<script>
-    			alert("CPF Ja Cadastrado");
+    			alert("CPF Ja Cadastrado!");
     			location = "telaCadast.php";
 				</script>
 				<?php
