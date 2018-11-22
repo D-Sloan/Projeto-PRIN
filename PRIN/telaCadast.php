@@ -59,26 +59,26 @@
         <div class="card card-signin my-5"> 
           <div class="card-body">
             <h5 class="card-title text-center">Cadastrar</h5>
-            <form action="teste.php" class="form-signin" method="GET" >
+            <form action="teste.php" class="form-signin" method="POST" >
 
               <div class="form-label-group">
-                <input type="name" id="inputName" class="form-control" placeholder="Nome" required autofocus>
+                <input type="text" id="inputName" class="form-control" placeholder="Nome" name="NameRegister" required autofocus>
+                <label for="inputName"></label>
+              </div>
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" name="EmailRegister" required autofocus>
+                <label for="inputEmail"></label>
+              </div>
+              <div class="form-label-group">
+                <input type="number" id="inputMatric" class="form-control" placeholder="Matricula" name="MatricRegister"  autofocus>
                 <label for="inputMatric"></label>
               </div>
               <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" required autofocus>
-                <label for="inputMatric"></label>
+                <input type="bynber" id="inputCPF" class="form-control" placeholder="CPF" name="CpfRegister" required autofocus>
+                <label for="inputCPF"></label>
               </div>
               <div class="form-label-group">
-                <input type="number" id="inputMatric" class="form-control" placeholder="Matricula" required autofocus>
-                <label for="inputMatric"></label>
-              </div>
-              <div class="form-label-group">
-                <input type="bynber" id="inputCPF" class="form-control" placeholder="CPF" required autofocus>
-                <label for="inputMatric"></label>
-              </div>
-              <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Senha" name="PassRegister" required>
                 <label for="inputPassword"></label>
               </div>
 
@@ -88,28 +88,28 @@
               
 
               <div class="form-check">
-				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="1">
 				  <label class="form-check-label" for="exampleRadios1">
 				    Coordenação
 				  </label>
 				</div>
 			
 				<div class="form-check">
-				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="2">
 				  <label class="form-check-label" for="exampleRadios2">
 				    Professor
 				  </label>
 			 </div>
 
 			 <div class="form-check">
-				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="3">
 				  <label class="form-check-label" for="exampleRadios3">
 				    Pai
 				  </label>
 			</div>
 
 			<div class="form-check">
-				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="4">
 				  <label class="form-check-label" for="exampleRadios4">
 				    Aluno
 				  </label>
