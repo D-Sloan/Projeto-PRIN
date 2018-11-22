@@ -70,7 +70,7 @@
                 <label for="inputEmail"></label>
               </div>
               <div class="form-label-group">
-                <input type="number" id="inputMatric" class="form-control" placeholder="Matricula" name="MatricRegister" required autofocus>
+                <input type="number" id="inputMatric" class="form-control" placeholder="Matricula" name="MatricRegister"  autofocus>
                 <label for="inputMatric"></label>
               </div>
               <div class="form-label-group">
@@ -88,28 +88,28 @@
               
 
               <div class="form-check">
-				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="1">
 				  <label class="form-check-label" for="exampleRadios1">
 				    Coordenação
 				  </label>
 				</div>
 			
 				<div class="form-check">
-				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="2">
 				  <label class="form-check-label" for="exampleRadios2">
 				    Professor
 				  </label>
 			 </div>
 
 			 <div class="form-check">
-				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="3">
 				  <label class="form-check-label" for="exampleRadios3">
 				    Pai
 				  </label>
 			</div>
 
 			<div class="form-check">
-				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="4">
 				  <label class="form-check-label" for="exampleRadios4">
 				    Aluno
 				  </label>

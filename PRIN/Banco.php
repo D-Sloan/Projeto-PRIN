@@ -1,3 +1,4 @@
+
 <?php
 
 
@@ -15,12 +16,19 @@ class Banco{
 
 			$conn = mysqli_connect("localhost", "root", "", "prin");
 			$Busca = mysqli_query($conn,"SELECT Cpf FROM user WHERE Cpf = '$Cpf'");
-			if($Busca != Null){
-				echo "<h1>ja cadastrado<\h1>"
+
+			if(mysqli_num_rows($Busca)>0){
+				return true;
+			}
+
+			else{
+				return false;
 			}
 			
-			
-			
+	}
+
+	public function realizarCadastro($Matricula, $Name, $Cpf, $Email, $Senha,$Tipo){
+
 	}
 
 }

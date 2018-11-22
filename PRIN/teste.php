@@ -5,8 +5,9 @@
 	$CPF = $_POST['CpfRegister'];
 	$Email = $_POST['EmailRegister'];
 	$Senha = $_POST['PassRegister'];
+	$tipo = (int) $_POST['exampleRadios'];
 
-	header("Location: telaLogin.html");
+	
 
 
 	
