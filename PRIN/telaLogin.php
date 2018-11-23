@@ -19,7 +19,11 @@
   </head>
 
   <body>
-
+    <?php
+          include("Banco.php");
+          $verificacao = new Banco();
+          $verificacao->deslogar();
+    ?>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
       <div class="container">
@@ -57,14 +61,14 @@
         <div class="card card-signin my-5"> 
           <div class="card-body">
             <h5 class="card-title text-center">Entrar</h5>
-            <form class="form-signin">
+            <form class="form-signin" method="POST" action="ProcessLogin.php">
               <div class="form-label-group">
-                <input type="email" id="inputMatric" class="form-control" placeholder="CPF" required autofocus>
-                <label for="inputMatric"></label>
+                <input type="text" id="inputCpf" class="form-control" placeholder="CPF" name="CpfLogin" required autofocus>
+                <label for="inputCpf"></label>
               </div>
 
               <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Senha" name="SenhaLogin" required>
                 <label for="inputPassword"></label>
               </div>
 

@@ -1,5 +1,7 @@
 <?php
 	include("Banco.php");
+	/*
+	
 	$Matric = $_POST['MatricRegister'];
 	$Name = $_POST['NameRegister'];
 	$CPF = $_POST['CpfRegister'];
@@ -7,16 +9,28 @@
 	$Senha = $_POST['PassRegister'];
 	$tipo = (int) $_POST['exampleRadios'];
 
-	$teste = new Banco();
+	
 
 	$teste->realizarCadastro($Matric, $Name, $CPF, $Email, $Senha, $tipo);
+	*/
 
-	
+	/*
+	$conn = mysqli_connect("localhost", "root", "", "PRIN");
+	mysqli_query($conn,"CREATE TABLE IF NOT EXISTS UserLog (Cpf varchar(14) ); ");
+	mysqli_close($conn);
+	*/
 
 
-	
-
-
+	/*
+	$teste = new Banco();
+	$teste->deslogar();
+	$teste->logar("12345678912");
+	$conn = mysqli_connect("localhost", "root", "", "PRIN");
+	$resultado = mysqli_query($conn,"SELECT * FROM userLog");
+	$registro =  mysqli_fetch_array($resultado);
+	$cpf = $registro['Cpf'];
+	echo "$cpf";
+	*/
 
 	/*
 	CRIAÇÃO DA TABELA
