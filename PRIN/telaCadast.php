@@ -74,7 +74,7 @@
                 <label for="inputMatric"></label>
               </div>
               <div class="form-label-group">
-                <input type="bynber" id="inputCPF" class="form-control" placeholder="CPF" name="CpfRegister" required autofocus>
+                <input type="number" id="inputCPF" class="form-control" placeholder="CPF" name="CpfRegister" required autofocus>
                 <label for="inputCPF"></label>
               </div>
               <div class="form-label-group">
