@@ -37,7 +37,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="telaCadast.html">Cadastrar</a>
+              <a class="nav-link" href="telaCadast.php">Cadastrar</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Notícias</a>
@@ -74,8 +74,6 @@
               </div>
               <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
               <hr class="my-4">
-              <button class="btn btn-lg btn-newuser btn-block" type="submit"><i class="fab fa-facebook-f mr-2"></i> Novo Usuário</button>
-               <button class="btn btn-lg btn-rememberpass btn-block" type="submit"><i class="fab fa-google mr-2"></i> Esqueci a Senha</button>
             </form>
           </div>
         </div>
