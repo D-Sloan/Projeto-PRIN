@@ -49,7 +49,7 @@ class Banco{
 			}
 			$Verificacao = $this->verificarCadastro($Cpf, $Email);
 			if($verificacao >10){
-				$verificacao -+10;
+				$verificacao -=10;
 			}
 			if($Verificacao == 1){
 				?>
