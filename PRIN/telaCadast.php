@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -19,6 +19,11 @@
   </head>
 
   <body>
+    <?php
+          include("Banco.php");
+          $verificacao = new Banco();
+          $verificacao->deslogar();
+    ?>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
@@ -59,7 +64,7 @@
         <div class="card card-signin my-5"> 
           <div class="card-body">
             <h5 class="card-title text-center">Cadastrar</h5>
-            <form action="teste.php" class="form-signin" method="POST" >
+            <form action="ProcessCadastro.php" class="form-signin" method="POST" >
 
               <div class="form-label-group">
                 <input type="text" id="inputName" class="form-control" placeholder="Nome" name="NameRegister" required autofocus>
