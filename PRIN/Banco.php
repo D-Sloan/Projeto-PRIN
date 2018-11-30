@@ -2,7 +2,6 @@
 <?php
 
 
-
 class Banco{
 
 
@@ -16,8 +15,6 @@ class Banco{
 		mysqli_close($conn);
 
 	}
-
-
 	protected function verificarCadastro($Cpf,$Email){
 			$contador = 0;
 			$conn = mysqli_connect("localhost", "root", "", "prin");

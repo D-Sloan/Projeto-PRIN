@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Logo Nav - Start Bootstrap Template</title>
+    <title>Tela Cadastro</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -93,7 +93,7 @@
               
 
               <div class="form-check">
-				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="1">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="1" required>
 				  <label class="form-check-label" for="exampleRadios1">
 				    Coordenação
 				  </label>
