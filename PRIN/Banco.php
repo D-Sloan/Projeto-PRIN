@@ -13,8 +13,8 @@ class Banco{
 		mysqli_query($conn ,"INSERT INTO user (Matricula, Nome, Cpf, Email, Senha, Tipo) VALUES('$Matricula', '$Name', '$resultado', '$Email', '$Senha', '$Tipo')");
 		$this->logar($resultado);
 		mysqli_close($conn);
-
 	}
+
 	protected function verificarCadastro($Cpf,$Email){
 			$contador = 0;
 			$conn = mysqli_connect("localhost", "root", "", "prin");
@@ -95,7 +95,6 @@ class Banco{
 				</script>
 				<?php
 			}
-
 	}
 
 	protected function logar($Cpf){
@@ -109,7 +108,6 @@ class Banco{
 		mysqli_query($conn ,"DELETE FROM userLog;");
 		mysqli_close($conn);
 	}
-
 
 	public function verificarLogin(){
 		$conn = mysqli_connect("localhost", "root", "", "prin");
@@ -192,7 +190,6 @@ class Banco{
 		else if($Tipo == 4){
 			echo "Aluno <br><br>Nome: $Nome";
 		}
-
 	}
 
 }
