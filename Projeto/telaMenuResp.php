@@ -1,5 +1,5 @@
 	<!DOCTYPE html>
-	<html lang="en">
+	<html lang="pt-br">
 
 	  <head>
 	  	
@@ -8,7 +8,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title>Logo Nav - Start Bootstrap Template</title>
+		<title>Tela Menu Responsável</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -62,9 +62,8 @@
 
 			  ?></h4>
 			  <div class="list-group">
-				<a href="#" class="list-group-item">Boletim</a>
+				<a href="#" class="list-group-item">Dependentes</a>
 				<a href="#" class="list-group-item">Chat</a>
-				<a href="#" class="list-group-item">Enviar Atividade</a>
 			  </div>
 
 			</div>
@@ -103,52 +102,24 @@
 				<div>
 				  <table class="table table-dark">
 				  <thead>
+				  	<tr>
+				  		<th colspan = "2" scope="col"><center>Dependentes</center></th>
+				  	</tr>
 					<tr>
-					  <th scope="col">Código</th>
-					  <th scope="col">Matéria</th>
-					  <th scope="col">Dia</th>
-					  <th scope="col">Horário</th>
+					  <th scope="col">Nome</th>
+					  <th scope="col">Turma</th>
 					</tr>
 					
 				  </thead>
 				  <tbody>
 
 					<tr>
-					  <th scope="row">1</th>
-					  <td>Português</td>
-					  <td>Segunda</td>
-					  <td>13:00</td>
+					  <td>Joel</td>
+					  <td>123</td>
 					</tr>
 					<tr>
-					  <th scope="row">2</th>
-					  <td>Matemática</td>
-					  <td>Segunda</td>
-					  <td>14:40</td>
-					</tr>
-					<tr>
-					  <th scope="row">3</th>
-					  <td>Matemática</td>
-					  <td>Segunda</td>
-					  <td>16:40</td>
-					</tr>
-				
-					<tr>
-					  <th scope="row">4</th>
-					  <td>Química</td>
-					  <td>Terça</td>
-					  <td>13:00</td>
-					</tr>
-					<tr>
-					  <th scope="row">5</th>
-					  <td>Física</td>
-					  <td>Terça</td>
-					  <td>14:40</td>
-					</tr>
-					<tr>
-					  <th scope="row">6</th>
-					  <td>Biologia</td>
-					  <td>Terça</td>
-					  <td>16:40</td>
+					  <td>Doug</td>
+					  <td>321</td>
 					</tr>
 				  </tbody>
 				</table>
