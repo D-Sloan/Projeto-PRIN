@@ -1,5 +1,5 @@
 	<!DOCTYPE html>
-	<html lang="en">
+	<html lang="pt-br">
 
 	  <head>
 	  	
@@ -8,7 +8,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title>Logo Nav - Start Bootstrap Template</title>
+		<title>Tela Menu Professor</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,9 +21,9 @@
 
 	  <body>
 	  	<?php
-	  		include("Banco.php");
+	  		/*include("Banco.php");
       		$verificacao = new Banco();
-      		$verificacao->verificarLogin();
+      		$verificacao->verificarLogin();*/
    		 ?>
 		<!-- Navigation -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
@@ -57,14 +57,19 @@
 			<div class="col-lg-3">
 
 			  <h4 class="my-4">Logado como: <br><?php 
-			  $banco = new Banco();
-			  $banco->verificarTipo();
+			  /*$banco = new Banco();
+			  $banco->verificarTipo();*/
 
 			  ?></h4>
 			  <div class="list-group">
-				<a href="#" class="list-group-item">Boletim</a>
+				<a href="#" class="list-group-item">Registrar Aula</a>
 				<a href="#" class="list-group-item">Chat</a>
-				<a href="#" class="list-group-item">Enviar Atividade</a>
+				<a href="#" class="list-group-item">Lista de Presença</a>
+				<a href="#" class="list-group-item">Inserir/Visualizar Notas</a>
+				<a href="#" class="list-group-item">Criar Nova Atividade</a>
+
+
+
 			  </div>
 
 			</div>
@@ -104,8 +109,7 @@
 				  <table class="table table-dark">
 				  <thead>
 					<tr>
-					  <th scope="col">Código</th>
-					  <th scope="col">Matéria</th>
+					  <th scope="col">Turma</th>
 					  <th scope="col">Dia</th>
 					  <th scope="col">Horário</th>
 					</tr>
@@ -114,39 +118,12 @@
 				  <tbody>
 
 					<tr>
-					  <th scope="row">1</th>
-					  <td>Português</td>
+					  <td>123</td>
 					  <td>Segunda</td>
 					  <td>13:00</td>
 					</tr>
 					<tr>
-					  <th scope="row">2</th>
-					  <td>Matemática</td>
-					  <td>Segunda</td>
-					  <td>14:40</td>
-					</tr>
-					<tr>
-					  <th scope="row">3</th>
-					  <td>Matemática</td>
-					  <td>Segunda</td>
-					  <td>16:40</td>
-					</tr>
-				
-					<tr>
-					  <th scope="row">4</th>
-					  <td>Química</td>
-					  <td>Terça</td>
-					  <td>13:00</td>
-					</tr>
-					<tr>
-					  <th scope="row">5</th>
-					  <td>Física</td>
-					  <td>Terça</td>
-					  <td>14:40</td>
-					</tr>
-					<tr>
-					  <th scope="row">6</th>
-					  <td>Biologia</td>
+					  <td>321</td>
 					  <td>Terça</td>
 					  <td>16:40</td>
 					</tr>

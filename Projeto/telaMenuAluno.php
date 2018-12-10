@@ -1,5 +1,5 @@
 	<!DOCTYPE html>
-	<html lang="en">
+	<html lang="pt-br">
 
 	  <head>
 	  	
@@ -8,7 +8,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title>Logo Nav - Start Bootstrap Template</title>
+		<title>Tela Menu Aluno</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -64,7 +64,7 @@
 			  <div class="list-group">
 				<a href="#" class="list-group-item">Boletim</a>
 				<a href="#" class="list-group-item">Chat</a>
-				<a href="#" class="list-group-item">Enviar Atividade</a>
+				<a href="#" class="list-group-item">Atividades</a>
 			  </div>
 
 			</div>
