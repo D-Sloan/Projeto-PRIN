@@ -11,5 +11,6 @@ body {
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
+	background-color: rgb(255,228,196);
   }
 }
