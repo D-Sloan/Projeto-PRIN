@@ -80,14 +80,10 @@
 		global $connection;
  
 		$data = json_decode(file_get_contents('php://input'), true);
-		$Matricula = (int) $_POST['matric'];
-		$Name = $_POST['nome'];
-		$Cpf = $_POST['cpf'];
-		$Email = $_POST['email'];
-		$Senha = $_POST['senha'];
-		$Tipo = (int) $_POST['tipo'];
-
-		$query="INSERT INTO user (Matricula, Nome, Cpf, Email, Senha, Tipo) VALUES('$Matricula', '$Name', '$Cpf', '$Email', '$Senha', '$Tipo')";
+		$aluno_nome=$_POST["aluno_nome"];
+		$aluno_matric=$_POST["aluno_matric"];
+		$aluno_idade=$_POST["aluno_idade"];
+		$query="INSERT INTO aluno (aluno_nome, aluno_matric, aluno_idade) VALUES('$aluno_nome', '$aluno_matric', '$aluno_idade')";
 
 		if(mysqli_query($connection, $query))
 		{
