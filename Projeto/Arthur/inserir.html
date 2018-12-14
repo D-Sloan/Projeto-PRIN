@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+	<title>Beta Api</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+
+	<form action="/apirestBeta/v1/alunos.php" method="POST">
+		<br>Empregados<br>
+
+		<br>Digite o nome: <input type="text" name="nome" required><br>
+		<br>Digite a matricula: <input type="text" name="matric" required pattern="^(\d{8})$" placeholder= "XXXXXXXX"><br>
+		<br>Digite o cpf: <input type="text" name="cpf" pattern="^(\d{3}.\d{3}.\d{3}-\d{2})$" placeholder= "XXX.XXX.XXX-XX" required><br>
+		<br>Digite o email: <input type="email" name="email" required><br>
+		<br>Digite a senha: <input type="text" name="senha" required><br>
+
+
+		<br>Coordenação:<input class="form-check-input" type="radio" name="tipo" id="btTipo1" value="1" required><br>
+		<br>Professor:<input class="form-check-input" type="radio" name="tipo" id="btTipo2" value="2"><br>
+		<br>Pai:<input class="form-check-input" type="radio" name="tipo" id="btTipo3" value="3"><br>
+		<br>Aluno:<input class="form-check-input" type="radio" name="tipo" id="btTipo4" value="4"><br>
+	
+	<br><input type="submit" value="Enviar">
+
+</body>
+</html>
