@@ -1,0 +1,3 @@
+RewriteEngine On # Turn on the rewriting engine
+RewriteRule ^alunos/?$ alunos.php [NC,L]
+RewriteRule ^alunos/([0-9]+)/?$ alunos.php?id=$1 [NC,L]
