@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS `user`(
+    Matricula INT(8),
+    Nome VARCHAR(40) NOT NULL,
+    Cpf VARCHAR(14) NOT NULL,
+    Email VARCHAR(25),
+    Senha VARCHAR(20),
+    Tipo INT(1),
+    PRIMARY KEY(`Cpf`)
+);
