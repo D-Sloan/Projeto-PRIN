@@ -11,7 +11,17 @@
     <title>Tela Cadastro</title>
 
 
-    <script type="text/javascript">
+    
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+
+  </head>
+  <script type="text/javascript">
 
 
       function isNumber(n) {
@@ -98,16 +108,7 @@
       }
 
 
-    </script>>
-
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/logo-nav.css" rel="stylesheet">
-
-  </head>
+    </script>
 
   <body>
 

@@ -18,12 +18,25 @@
 
   </head>
 
+  <script type="text/javascript">
+      
+    function tipo(){
+
+      if(loginForm.exampleRadios.value == 4 || loginForm.exampleRadios.value == 2){
+        loginForm.CpfLogin.placeholder="Matrícula";
+      }
+      else if(loginForm.exampleRadios.value == 1 ){
+         loginForm.CpfLogin.placeholder="Codigo De Segurança";
+      }
+      else{
+         loginForm.CpfLogin.placeholder="CPF";
+      }
+      
+    }
+
+  </script>>
+
   <body>
-    <?php
-          include("Banco.php");
-          $verificacao = new Banco();
-          $verificacao->deslogar();
-    ?>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
       <div class="container">
@@ -61,7 +74,7 @@
         <div class="card card-signin my-5"> 
           <div class="card-body">
             <h5 class="card-title text-center">Entrar</h5>
-            <form class="form-signin" method="POST" action="ProcessLogin.php">
+            <form class="form-signin" name="loginForm" method="POST" action="ProcessLogin.php">
               <div class="form-label-group">
                 <input type="text" id="inputCpf" class="form-control" placeholder="CPF" name="CpfLogin" required autofocus>
                 <label for="inputCpf"></label>
@@ -72,10 +85,40 @@
                 <label for="inputPassword"></label>
               </div>
 
-              <div class="custom-control custom-checkbox mb-3">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">Não me esqueça</label>
-              </div>
+              <hr class="my-2">
+            <h5 class="card-title">Tipo de Usuário:</h5>
+              
+
+              <div class="form-check">
+          <input class="form-check-input" type="radio" onclick="tipo()" name="exampleRadios" id="exampleRadios1" value="1" required>
+          <label class="form-check-label" for="exampleRadios1">
+            Coordenação
+          </label>
+        </div>
+      
+        <div class="form-check">
+          <input class="form-check-input" type="radio" onclick="tipo()" name="exampleRadios" id="exampleRadios2" value="2">
+          <label class="form-check-label" for="exampleRadios2">
+            Professor
+          </label>
+       </div>
+
+       <div class="form-check">
+          <input class="form-check-input" type="radio" onclick="tipo()" name="exampleRadios" id="exampleRadios3" value="3">
+          <label class="form-check-label" for="exampleRadios3">
+            Pai
+          </label>
+      </div>
+
+      <div class="form-check">
+          <input class="form-check-input" type="radio" onclick="tipo()" name="exampleRadios" id="exampleRadios4" value="4">
+          <label class="form-check-label" for="exampleRadios4">
+            Aluno
+          </label>
+      </div>
+
+          <hr class="my-3">
+
               <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
               <hr class="my-4">
             </form>
