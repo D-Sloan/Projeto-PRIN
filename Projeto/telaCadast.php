@@ -21,6 +21,16 @@
       function validarDados(){
         var cpf = CadastForm.CpfRegister.value;
 
+        var matric = CadastForm.MatricRegister.value;
+
+        matric = matric.replace("-","");
+
+        if(!isNumber(matric)){
+          alert("somente números no campo de matricula");
+          CadastForm.MatricRegister.focus();
+          return false;
+        }
+
         if(cpf.length != 14){
           alert ("CPF deve conter exatamente os 11 dígitos");
           CadastForm.CpfRegister.focus();
@@ -40,7 +50,7 @@
           return false;
         }
 
-        if (CadastForm.exampleRadios.value == 4 && CadastForm.MatricRegister.value.length < 8){
+        if (CadastForm.exampleRadios.value == 4 && CadastForm.MatricRegister.value.length < 9){
           alert ("Matricula deve seguir o formato de 8 dígitos!!");
           CadastForm.MatricRegister.focus();
           return false;
@@ -77,6 +87,12 @@
         }
         else if(cpf.length==11){
           CadastForm.CpfRegister.value = cpf+"-";
+        }
+
+        var matric = CadastForm.MatricRegister.value;
+
+        if(matric.length == 4){
+          CadastForm.MatricRegister.value = CadastForm.MatricRegister.value+"-";
         }
 
       }
@@ -145,7 +161,7 @@
                 <label for="inputEmail"></label>
               </div>
               <div class="form-label-group">
-                <input type="number" id="inputMatric" class="form-control" placeholder="Matricula" name="MatricRegister"  autofocus>
+                <input type="text" id="inputMatric" onkeypress="mascarar()"  maxlength="9" class="form-control" placeholder="Matricula" name="MatricRegister"  autofocus>
                 <label for="inputMatric"></label>
               </div>
               <div class="form-label-group">
