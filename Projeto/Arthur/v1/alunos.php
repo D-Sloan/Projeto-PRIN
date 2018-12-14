@@ -8,33 +8,33 @@
 	switch($request_method)
 	{
 		case 'GET':
-			// Retrive Products
+			// Buscar uma ID ou Todas
 			if(!empty($_GET["id"]))
 			{
 				$id=intval($_GET["id"]);
-				get_employees2($id);
+				get_alunos2($id);
 			}
 			else
 			{
-				get_employees();
+				get_alunos();
 			}
 			break;
 
 		case 'POST':
 		// Insert Product
-		insert_employee();
+		insert_aluno();
 		break;
 
 		case 'PUT':
 		// Update Product
 		$id=intval($_GET["id"]);
-		update_employee($id);
+		update_aluno($id);
 		break;
 
 		case 'DELETE':
 		// Delete Product
 		$id=intval($_GET["id"]);
-		delete_employee($id);
+		delete_aluno($id);
 		break;
 
 		default:
@@ -43,10 +43,10 @@
 			break;
 	}
 
-	function get_employees()
+	function get_alunos()
 	{
 		global $connection;
-		$query="SELECT * FROM employee";
+		$query="SELECT * FROM aluno";
 		$response=array();
 		$result=mysqli_query($connection, $query);
 		while($row=mysqli_fetch_array($result))
@@ -57,10 +57,10 @@
 		echo json_encode($response,JSON_PRETTY_PRINT);
 	}
 
-	function get_employees2($id=0)
+	function get_alunos2($id=0)
 	{
 		global $connection;
-		$query="SELECT * FROM employee";
+		$query="SELECT * FROM aluno";
 		if($id != 0)
 		{
 			$query.=" WHERE id=".$id." LIMIT 1";
@@ -75,50 +75,50 @@
 		echo json_encode($response,JSON_PRETTY_PRINT);
 	}
 
-	function insert_employee()
+	function insert_aluno()
 	{
 		global $connection;
  
 		$data = json_decode(file_get_contents('php://input'), true);
-		$employee_name=$_POST["employee_name"];
-		$employee_salary=$_POST["employee_salary"];
-		$employee_age=$_POST["employee_age"];
-		$query="INSERT INTO employee (employee_name, employee_salary, employee_age) VALUES('$employee_name', '$employee_salary', '$employee_age')";
+		$aluno_nome=$_POST["aluno_nome"];
+		$aluno_matric=$_POST["aluno_matric"];
+		$aluno_idade=$_POST["aluno_idade"];
+		$query="INSERT INTO aluno (aluno_nome, aluno_matric, aluno_idade) VALUES('$aluno_nome', '$aluno_matric', '$aluno_idade')";
 
 		if(mysqli_query($connection, $query))
 		{
 			$response=array(
 				'status' => 1,
-				'status_message' =>'Employee Added Successfully.'
+				'status_message' =>'Aluno adicionado com sucesso.'
 			);
 		}
 		else
 		{
 			$response=array(
 				'status' => 0,
-				'status_message' =>'Employee Addition Failed.'
+				'status_message' =>'Aluno não foi adicionado com sucesso.'
 			);
 		}
 		header('Content-Type: application/json');
 		echo json_encode($response,JSON_PRETTY_PRINT);
 	}
 
-	function delete_employee($id)
+	function delete_aluno($id)
 	{
 		global $connection;
-		$query="DELETE FROM employee WHERE id=".$id;
+		$query="DELETE FROM aluno WHERE id=".$id;
 		if(mysqli_query($connection, $query))
 		{
 			$response=array(
 				'status' => 1,
-				'status_message' =>'Employee Deleted Successfully.'
+				'status_message' =>'Aluno deletado com sucesso.'
 			);
 		}
 		else
 		{
 			$response=array(
 				'status' => 0,
-				'status_message' =>'Employee Deletion Failed.'
+				'status_message' =>'Aluno não foi deletado com sucesso.'
 			);
 		}
 		header('Content-Type: application/json');
