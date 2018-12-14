@@ -6,11 +6,16 @@
 
 body {
   padding-top: 54px;
+  background-color: rgb(255,228,196);
 }
 
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   body {
     padding-top: 56px;
 	background-color: rgb(255,228,196);
   }
+}
+
+th, td{
+	text-align: center;
 }
