@@ -21,9 +21,11 @@
 
 	  <body>
 	  	<?php
+	  		/*
 	  		include("Banco.php");
       		$verificacao = new Banco();
       		$verificacao->verificarLogin();
+      		*/
    		 ?>
 		<!-- Navigation -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
@@ -56,15 +58,15 @@
 
 			<div class="col-lg-3">
 
-			  <h4 class="my-4">Logado como: <br><?php 
+			  <h4 class="my-4">Logado como: <br><?php /*
 			  $banco = new Banco();
 			  $banco->verificarTipo();
-
+				*/
 			  ?></h4>
 			  <div class="list-group">
-				<a href="#" class="list-group-item">Boletim</a>
-				<a href="#" class="list-group-item">Chat</a>
-				<a href="#" class="list-group-item">Atividades</a>
+				<a href="telaBoletimAluno" class="list-group-item">Boletim</a>
+				<a href="telaChat.php" class="list-group-item">Chat</a>
+				<a href="telaAtividadeAluno.php" class="list-group-item">Atividades</a>
 			  </div>
 
 			</div>

@@ -63,7 +63,7 @@
 			  ?></h4>
 			  <div class="list-group">
 				<a href="#" class="list-group-item">Registrar Aula</a>
-				<a href="#" class="list-group-item">Chat</a>
+				<a href="telaChat.php" class="list-group-item">Chat</a>
 				<a href="#" class="list-group-item">Lista de Presença</a>
 				<a href="#" class="list-group-item">Inserir/Visualizar Notas</a>
 				<a href="#" class="list-group-item">Criar Nova Atividade</a>

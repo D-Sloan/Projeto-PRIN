@@ -8,28 +8,32 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title>Tela Menu Responsável</title>
+		<title>Tela Atividade</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 		<!-- Custom styles for this template -->
 		<link href="css/logo-nav.css" rel="stylesheet">
+		<link href="css/chat.css" rel="stylesheet">
+
 
 	  </head>
 
 
 	  <body>
 	  	<?php
+	  		/*
 	  		include("Banco.php");
       		$verificacao = new Banco();
       		$verificacao->verificarLogin();
+      		*/
    		 ?>
 		<!-- Navigation -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
 		  <div class="container">
 			<a class="navbar-brand" href="#">
-			 Boletim-Online
+			 Patatí & Patatá
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 			  <span class="navbar-toggler-icon"></span>
@@ -56,13 +60,14 @@
 
 			<div class="col-lg-3">
 
-			  <h4 class="my-4">Logado como: <br><?php 
+			  <h4 class="my-4">Logado como: <br><?php /*
 			  $banco = new Banco();
 			  $banco->verificarTipo();
-
+				*/
 			  ?></h4>
 			  <div class="list-group">
-				<a href="#" class="list-group-item">Dependentes</a>
+				<a href="telaMenuAluno.php" class="list-group-item">Menu</a>
+				<a href="telaBoletimAluno.php" class="list-group-item">Boletim</a>
 				<a href="telaChat.php" class="list-group-item">Chat</a>
 			  </div>
 
@@ -70,60 +75,27 @@
 			<!-- /.col-lg-3 -->
 
 			<div class="col-lg-9">
-
-			  <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
-				<ol class="carousel-indicators">
-				  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-				  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-				  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-				</ol>
-				<div class="carousel-inner" role="listbox">
-				  <div class="carousel-item active">
-					<img class="d-block img-fluid" src="images/news1.png" alt="First slide">
-				  </div>
-				  <div class="carousel-item">
-					<img class="d-block img-fluid" src="images/news2.jpg" alt="Second slide">
-				  </div>
-				  <div class="carousel-item">
-					<img class="d-block img-fluid" src="images/news3.jpg" alt="Third slide">
-				  </div>
-				</div>
-				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				  <span class="sr-only">Previous</span>
-				</a>
-				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-				  <span class="sr-only">Next</span>
-				</a>
+				<br><br>
 				
-			 </div>
 
-				<div>
-				  <table class="table table-dark">
-				  <thead>
-				  	<tr>
-				  		<th colspan = "2" scope="col"><center>Dependentes</center></th>
-				  	</tr>
-					<tr>
-					  <th scope="col">Nome</th>
-					  <th scope="col">Turma</th>
-					</tr>
-					
-				  </thead>
-				  <tbody>
+				<div id="box-toggle" class="boxmodel">
+					<h2><center>Atividades</center></h2>
+					<h3>Português</h3>
+					<div class="tgl">
+						<h4>18/06</h2>
+						<p>•Trabalho de barroco</p>
+					</div>
 
-					<tr>
-					  <td>Joel</td>
-					  <td>123</td>
-					</tr>
-					<tr>
-					  <td>Doug</td>
-					  <td>321</td>
-					</tr>
-				  </tbody>
-				</table>
+					<h3><br>Matemática</h3>
+					<div class="tgl">
+						<h2>21/05</h2>
+						<p>•Prova Bimestral - Conteúdos: Logaritmo e Matriz</p>
+					</div>
+
+
 				</div>
+
+
 
 			</div>
 			<!-- /.col-lg-9 -->
@@ -138,6 +110,8 @@
 		<!-- Bootstrap core JavaScript -->
 		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="testMenuAtiv.js"></script>
+		
 
 	  </body>
 
