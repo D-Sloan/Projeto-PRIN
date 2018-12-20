@@ -6,11 +6,48 @@
 
 body {
   padding-top: 54px;
+  background-color: rgb(255,228,196);
 }
 
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   body {
     padding-top: 56px;
 	background-color: rgb(255,228,196);
   }
 }
+
+th, td{
+	text-align: center;
+}
+
+.boxmodel{
+	align-content: center;
+	width: 65%;
+    height: 85%;
+    background: #ffffffb3;;
+    color: #000;
+    padding: 20px;
+}
+
+#areaAtiv{
+	position: relative;
+	left: 8%;
+	top: 8%;
+	width: 75%;
+	height: 65%;
+}
+
+#areaAtiv #formAtiv{
+	position: absolute;
+	
+ 	margin-right:5%;
+ 	background-color: #fff;
+}
+
+#formulario label
+{
+  position:absolute;
+  left:19px;
+  margin-right:5px;
+}
+

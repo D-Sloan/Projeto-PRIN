@@ -8,7 +8,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title>Tela Menu Responsável</title>
+		<title>Tela Boletim Aluno</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,15 +21,17 @@
 
 	  <body>
 	  	<?php
+	  		/*
 	  		include("Banco.php");
       		$verificacao = new Banco();
       		$verificacao->verificarLogin();
+      		*/
    		 ?>
 		<!-- Navigation -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
 		  <div class="container">
 			<a class="navbar-brand" href="#">
-			 Boletim-Online
+			 Patati & Patatá
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 			  <span class="navbar-toggler-icon"></span>
@@ -56,14 +58,15 @@
 
 			<div class="col-lg-3">
 
-			  <h4 class="my-4">Logado como: <br><?php 
+			  <h4 class="my-4">Logado como: <br><?php /*
 			  $banco = new Banco();
 			  $banco->verificarTipo();
-
+				*/
 			  ?></h4>
 			  <div class="list-group">
-				<a href="#" class="list-group-item">Dependentes</a>
+				<a href="telaMenuAluno.php" class="list-group-item">Menu</a>
 				<a href="telaChat.php" class="list-group-item">Chat</a>
+				<a href="telaAtividadeAluno.php" class="list-group-item">Atividades</a>
 			  </div>
 
 			</div>
@@ -71,59 +74,56 @@
 
 			<div class="col-lg-9">
 
-			  <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
-				<ol class="carousel-indicators">
-				  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-				  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-				  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-				</ol>
-				<div class="carousel-inner" role="listbox">
-				  <div class="carousel-item active">
-					<img class="d-block img-fluid" src="images/news1.png" alt="First slide">
-				  </div>
-				  <div class="carousel-item">
-					<img class="d-block img-fluid" src="images/news2.jpg" alt="Second slide">
-				  </div>
-				  <div class="carousel-item">
-					<img class="d-block img-fluid" src="images/news3.jpg" alt="Third slide">
-				  </div>
-				</div>
-				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				  <span class="sr-only">Previous</span>
-				</a>
-				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-				  <span class="sr-only">Next</span>
-				</a>
-				
-			 </div>
 
 				<div>
+					<br><br>
 				  <table class="table table-dark">
-				  <thead>
+				<thead>
 				  	<tr>
-				  		<th colspan = "2" scope="col"><center>Dependentes</center></th>
+				  		<th colspan="8"><big><center>Boletim</center></big></th>
 				  	</tr>
 					<tr>
-					  <th scope="col">Nome</th>
-					  <th scope="col">Turma</th>
+					  <th scope="col">Matéria</th>
+					  <th scope="col">1B</th>
+					  <th scope="col">2B</th>
+					  <th scope="col">R1</th>
+					  <th scope="col">3B</th>
+					  <th scope="col">4B</th>
+					  <th scope="col">R2</th>
+					  <th scope="col">Média Final</th>
 					</tr>
 					
-				  </thead>
-				  <tbody>
+				</thead>
+
+				<tbody>
 
 					<tr>
-					  <td>Joel</td>
-					  <td>123</td>
+					  <td>Português</td>
+					  <td>8</td>
+					  <td>6</td>
+					  <td>----</td>
+					  <td>7</td>
+					  <td>4,5</td>
+					  <td>8,5</td>
+					  <td>7,4</td>
 					</tr>
+
 					<tr>
-					  <td>Doug</td>
-					  <td>321</td>
+					  <td>Matemática</td>
+					  <td>10</td>
+					  <td>9</td>
+					  <td>----</td>
+					  <td>8</td>
+					  <td>7</td>
+					  <td>----</td>
+					  <td>8,5</td>
 					</tr>
-				  </tbody>
+
+				</tbody>
+
 				</table>
-				</div>
+
+			</div>
 
 			</div>
 			<!-- /.col-lg-9 -->

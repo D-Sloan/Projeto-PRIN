@@ -64,9 +64,9 @@
 				*/
 			  ?></h4>
 			  <div class="list-group">
-				<a href="#" class="list-group-item">Boletim</a>
-				<a href="#" class="list-group-item">Chat</a>
-				<a href="#" class="list-group-item">Atividades</a>
+				<a href="telaBoletimAluno" class="list-group-item">Boletim</a>
+				<a href="telaChat.php" class="list-group-item">Chat</a>
+				<a href="telaAtividadeAluno.php" class="list-group-item">Atividades</a>
 			  </div>
 
 			</div>

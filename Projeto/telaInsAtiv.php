@@ -8,7 +8,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title>Tela Menu Responsável</title>
+		<title>Tela Inserir Atividade</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,15 +21,17 @@
 
 	  <body>
 	  	<?php
+	  		/*
 	  		include("Banco.php");
       		$verificacao = new Banco();
       		$verificacao->verificarLogin();
+      		*/
    		 ?>
 		<!-- Navigation -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
 		  <div class="container">
 			<a class="navbar-brand" href="#">
-			 Boletim-Online
+			 Patatí & Patatá
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 			  <span class="navbar-toggler-icon"></span>
@@ -56,14 +58,15 @@
 
 			<div class="col-lg-3">
 
-			  <h4 class="my-4">Logado como: <br><?php 
+			  <h4 class="my-4">Logado como: <br><?php /*
 			  $banco = new Banco();
 			  $banco->verificarTipo();
-
+				*/
 			  ?></h4>
 			  <div class="list-group">
-				<a href="#" class="list-group-item">Dependentes</a>
-				<a href="telaChat.php" class="list-group-item">Chat</a>
+				<a href="telaMenuAluno.php" class="list-group-item">Menu</a>
+				<a href="telaBoletimAluno" class="list-group-item">Boletim</a>
+				<a href="telaAtividadeAluno.php" class="list-group-item">Atividades</a>
 			  </div>
 
 			</div>
@@ -71,58 +74,25 @@
 
 			<div class="col-lg-9">
 
-			  <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
-				<ol class="carousel-indicators">
-				  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-				  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-				  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-				</ol>
-				<div class="carousel-inner" role="listbox">
-				  <div class="carousel-item active">
-					<img class="d-block img-fluid" src="images/news1.png" alt="First slide">
-				  </div>
-				  <div class="carousel-item">
-					<img class="d-block img-fluid" src="images/news2.jpg" alt="Second slide">
-				  </div>
-				  <div class="carousel-item">
-					<img class="d-block img-fluid" src="images/news3.jpg" alt="Third slide">
-				  </div>
-				</div>
-				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				  <span class="sr-only">Previous</span>
-				</a>
-				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-				  <span class="sr-only">Next</span>
-				</a>
-				
-			 </div>
+				<br>
+				<h2><strong><center>Inserção de Atividade</center></strong></h2>
 
-				<div>
-				  <table class="table table-dark">
-				  <thead>
-				  	<tr>
-				  		<th colspan = "2" scope="col"><center>Dependentes</center></th>
-				  	</tr>
-					<tr>
-					  <th scope="col">Nome</th>
-					  <th scope="col">Turma</th>
-					</tr>
-					
-				  </thead>
-				  <tbody>
+				<div id="areaAtiv">
+					<form id="formAtiv" action="" method="POST">
+						<p> •Turma:<select name="turma">
+							<option>123</option>
+							<option>321</option>
+						</select></p>
 
-					<tr>
-					  <td>Joel</td>
-					  <td>123</td>
-					</tr>
-					<tr>
-					  <td>Doug</td>
-					  <td>321</td>
-					</tr>
-				  </tbody>
-				</table>
+						<p>•Título: <input type="text" name="titulo"></p>
+						 •Descrição: <p><textarea name="descricao" rows="2" cols="24"></textarea></p>
+						<label>
+							 •Arquivo:
+						</label>
+						<input type="file" name="anexo" size="60">
+
+						<p><input type="submit" value="Registrar Atividade"></p>
+					</form>
 				</div>
 
 			</div>

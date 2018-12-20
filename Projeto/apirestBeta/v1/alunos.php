@@ -80,10 +80,7 @@
 		global $connection;
  
 		$data = json_decode(file_get_contents('php://input'), true);
-		$aluno_nome=$_POST["aluno_nome"];
-		$aluno_matric=$_POST["aluno_matric"];
-		$aluno_idade=$_POST["aluno_idade"];
-		$query="INSERT INTO aluno (aluno_nome, aluno_matric, aluno_idade) VALUES('$aluno_nome', '$aluno_matric', '$aluno_idade')";
+
 
 		if(mysqli_query($connection, $query))
 		{
