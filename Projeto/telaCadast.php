@@ -10,6 +10,10 @@
 
     <title>Tela Cadastro</title>
 
+
+    
+
+
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -17,13 +21,96 @@
     <link href="css/logo-nav.css" rel="stylesheet">
 
   </head>
+  <script type="text/javascript">
+
+
+      function isNumber(n) {
+          return !isNaN(parseFloat(n)) && isFinite(n);
+      }
+
+      function validarDados(){
+        let cpf = CadastForm.CpfRegister.value;
+
+        let matric = CadastForm.MatricRegister.value;
+
+        matric = matric.replace("-","");
+
+        if(!isNumber(matric)){
+          alert("somente números no campo de matricula");
+          CadastForm.MatricRegister.focus();
+          return false;
+        }
+
+        if(cpf.length != 14){
+          alert ("CPF deve conter exatamente os 11 dígitos");
+          CadastForm.CpfRegister.focus();
+          return false;
+          
+        }
+        cpf = cpf.replace(".","");
+        cpf = cpf.replace("-","");
+        if(!isNumber(cpf)){
+          alert ("CPF deve conter apenas números");
+          CadastForm.CpfRegister.focus();
+          return false;
+        }
+
+        if(CadastForm.exampleRadios.value == 1){
+          alert ("Desculpe não estamos cadastrando coordenadores!!");
+          return false;
+        }
+
+        if (CadastForm.exampleRadios.value == 4 && CadastForm.MatricRegister.value.length < 9){
+          alert ("Matricula deve seguir o formato de 8 dígitos!!");
+          CadastForm.MatricRegister.focus();
+          return false;
+        }
+
+        if(CadastForm.PassRegister.value.length < 8){
+          alert ("Senha deve conter no mínimo 8 caracteres!!");
+          CadastForm.PassRegister.focus();
+          return false;
+        }
+
+        var regex = /^(?=(?:.*?[a-z]){3})(?=(?:.*?[0-9]){3})/;
+        var senha = CadastForm.PassRegister.value;
+        if(!regex.exec(senha)){
+          alert("A senha deve conter no mínimo 3 letras e 3 números");
+          CadastForm.PassRegister.focus();
+          return false;
+        }
+
+        
+
+        return true;
+      }
+
+      function mascarar(){
+
+        var cpf = CadastForm.CpfRegister.value;
+
+        if(cpf.length==3){
+          CadastForm.CpfRegister.value = cpf+".";
+        }
+        else if(cpf.length==7){
+          CadastForm.CpfRegister.value = cpf+".";
+        }
+        else if(cpf.length==11){
+          CadastForm.CpfRegister.value = cpf+"-";
+        }
+
+        var matric = CadastForm.MatricRegister.value;
+
+        if(matric.length == 4){
+          CadastForm.MatricRegister.value = CadastForm.MatricRegister.value+"-";
+        }
+
+      }
+
+
+    </script>
 
   <body>
-    <?php
-          include("Banco.php");
-          $verificacao = new Banco();
-          $verificacao->deslogar();
-    ?>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
@@ -64,7 +151,7 @@
         <div class="card card-signin my-5"> 
           <div class="card-body">
             <h5 class="card-title text-center">Cadastrar</h5>
-            <form action="ProcessCadastro.php" class="form-signin" method="POST" >
+            <form name = "CadastForm" action ="ProcessCadastro.php" onsubmit="return validarDados()"  class="form-signin" method="POST" >
 
               <div class="form-label-group">
                 <input type="text" id="inputName" class="form-control" placeholder="Nome" name="NameRegister" required autofocus>
@@ -75,11 +162,11 @@
                 <label for="inputEmail"></label>
               </div>
               <div class="form-label-group">
-                <input type="number" id="inputMatric" class="form-control" placeholder="Matricula" name="MatricRegister"  autofocus>
+                <input type="text" id="inputMatric" onkeypress="mascarar()"  maxlength="9" class="form-control" placeholder="Matricula" name="MatricRegister"  autofocus>
                 <label for="inputMatric"></label>
               </div>
               <div class="form-label-group">
-                <input type="number" id="inputCPF" class="form-control" placeholder="CPF" name="CpfRegister" required autofocus>
+                <input type="text" id="inputCPF" onkeypress="mascarar()" maxlength="14"  class="form-control" placeholder="CPF" name="CpfRegister" required autofocus>
                 <label for="inputCPF"></label>
               </div>
               <div class="form-label-group">
@@ -122,7 +209,7 @@
 
 			 	  <hr class="my-3">
 
-	              <button class="btn btn-lg btn-primary btn-block" type="submit">Finalizar Cadastro</button>
+	              <button class="btn btn-lg btn-primary btn-block" type="submit"">Finalizar Cadastro</button>
 
 	              <hr class="my-3">
 

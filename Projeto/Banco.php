@@ -86,7 +86,18 @@ class Banco{
 			}
 			else{
 
+				if ($Tipo == 1){
+					?>
+					<script>
+    					alert("Desculpe, ainda não cadastramos coordenadores");
+    					location = "telaCadast.php";
+						</script>
+					<?php
+				}
+
 				$this->inserirUser($Matricula, $Name, $Cpf, $Email, $Senha,$Tipo)
+
+				
 
 				?>
 				<script>
@@ -105,7 +116,7 @@ class Banco{
 
 	public function deslogar(){
 		$conn = mysqli_connect("localhost", "root", "", "prin");
-		mysqli_query($conn ,"DELETE FROM userLog;");
+		mysqli_query($conn ,"DELETE FROM userLog ;");
 		mysqli_close($conn);
 	}
 
@@ -145,13 +156,45 @@ class Banco{
 			$resultado = substr_replace($Cpf, '.', 3, 0);
 			$resultado = substr_replace($resultado, '.', 7, 0);
 			$resultado = substr_replace($resultado, '-', 11, 0);
+
+
+
 			$this->logar($resultado);
-			?>
-				<script>
-    			alert("Logado Com Sucesso");
-    			location = "telaMenu.php";
-				</script>
-			<?php
+			$conn = mysqli_connect("localhost", "root", "", "PRIN");
+			$resultado = mysqli_query($conn,"SELECT * FROM userLog");
+			$registro =  mysqli_fetch_array($resultado);
+			$cpf = $registro['Cpf'];
+
+			$resultado = mysqli_query($conn,"SELECT Tipo FROM user WHERE Cpf = '$cpf'");
+			$registro =  mysqli_fetch_array($resultado);
+			$Tipo = $registro['Tipo'];
+
+			if($Tipo == 2){
+				?>
+					<script>
+    				alert("Logado Com Sucesso");
+    				location = "telaMenuProf.php";
+					</script>
+				<?php
+			}
+			else if($Tipo == 3){
+				?>
+					<script>
+    				alert("Logado Com Sucesso");
+    				location = "telaMenuResp.php";
+					</script>
+				<?php
+			}
+			if($Tipo == 4){
+				?>
+					<script>
+    				alert("Logado Com Sucesso");
+    				location = "telaMenuAluno.php";
+					</script>
+				<?php
+			}
+
+			
 		}
 		else{
 			?>
