@@ -22,7 +22,7 @@
 	mysqli_query($conn, "CREATE TABLE IF NOT EXISTS T_Materia(MateriaCod varchar(3) PRIMARY KEY, Nome varchar(15) not null, TurmaCod varchar(3), MatricProf int(8) not null, HorarioCod varchar(2) not null, CONSTRAINT fk_MatTurm FOREIGN KEY (TurmaCod) REFERENCES T_Turma (TurmaCod), CONSTRAINT fk_MatProf FOREIGN KEY (MatricProf) REFERENCES T_Professor (MatricProf), CONSTRAINT fk_MatHor FOREIGN KEY (HorarioCod) REFERENCES T_Horario (HorarioCod));");
 
 	// Eroo em alguma linha que eu não sei
-	mysqli_query($conn,"CREATE TABLE IF NOT EXISTS T_Freq(MatricAluno int(8), MateriaCod varchar(3), Data varchar(10) not null, Presença boolean not null,PRIMARY KEY (MatricAluno, MateriaCod), CONSTRAINT fk_FreqAl FOREIGN KEY (MatricAluno) REFERENCES T_Aluno(Matric), CONSTRAINT fk_FreqMat FOREIGN KEY(MateriaCod) REFERENCES T_Materia(MateriaCod) );");
+	mysqli_query($conn,"CREATE TABLE IF NOT EXISTS T_Freq(MatricAluno int(8), MateriaCod varchar(3), Data varchar(10) not null, Presenca boolean not null,PRIMARY KEY (MatricAluno, MateriaCod), CONSTRAINT fk_FreqAl FOREIGN KEY (MatricAluno) REFERENCES T_Aluno(Matric), CONSTRAINT fk_FreqMat FOREIGN KEY(MateriaCod) REFERENCES T_Materia(MateriaCod) );");
 
 	mysqli_query($conn,"CREATE TABLE IF NOT EXISTS T_Matrics (MatricUser int(8) PRIMARY KEY, Tipo int(1) not null)");
 
