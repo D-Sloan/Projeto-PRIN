@@ -29,9 +29,9 @@
       }
 
       function validarDados(){
-        var cpf = CadastForm.CpfRegister.value;
+        let cpf = CadastForm.CpfRegister.value;
 
-        var matric = CadastForm.MatricRegister.value;
+        let matric = CadastForm.MatricRegister.value;
 
         matric = matric.replace("-","");
 
