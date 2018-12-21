@@ -78,20 +78,21 @@
 				<h2><strong><center>Inserção de Atividade</center></strong></h2>
 
 				<div id="areaAtiv">
-					<form id="formAtiv" action="" method="POST">
-						<p> •Turma:<select name="turma">
+					<form action="" method="POST">
+						<br>
+						<p>&nbsp;&nbsp;&nbsp;•Turma:<select name="turma">
 							<option>123</option>
 							<option>321</option>
 						</select></p>
 
-						<p>•Título: <input type="text" name="titulo"></p>
-						 •Descrição: <p><textarea name="descricao" rows="2" cols="24"></textarea></p>
+						<p>&nbsp;&nbsp;&nbsp;•Título: <input type="text" name="titulo"></p>
+						 &nbsp;&nbsp;&nbsp;•Descrição:<p>&nbsp;&nbsp;&nbsp;<textarea name="descricao" rows="2" cols="24"></textarea></p>
 						<label>
-							 •Arquivo:
+							 &nbsp;&nbsp;&nbsp;•Arquivo:
 						</label>
 						<input type="file" name="anexo" size="60">
 
-						<p><input type="submit" value="Registrar Atividade"></p>
+						<p><center><input type="submit" value="Registrar Atividade"></p></center>
 					</form>
 				</div>
 
