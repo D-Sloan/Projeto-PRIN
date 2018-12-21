@@ -41,3 +41,16 @@ th, td{
 #areaAtiv p{
   margin-top: 1%;
 }
+
+#areaNota{
+  position: relative;
+  left: 8%;
+  top: 8%;
+  width: 95 %;
+  height: 85%;
+  background-color: #fff;
+}
+
+#areaNota p{
+  margin-top: 1%;
+}
