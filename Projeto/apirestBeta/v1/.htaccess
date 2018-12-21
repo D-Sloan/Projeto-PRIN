@@ -1,3 +1,10 @@
 RewriteEngine On # Turn on the rewriting engine
-RewriteRule ^alunos/?$ alunos.php [NC,L]
-RewriteRule ^alunos/([0-9]+)/?$ alunos.php?id=$1 [NC,L]
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+ 
+RewriteRule ^api/([a-zA-Z0-9-/]+)/([0-9]+)$ alunos.php?table=$1&id=$2 [QSA]
+
+RewriteRule ^api/([a-zA-Z0-9-/]+)/?$ alunos.php?id=$1 [NC,L]
+
+

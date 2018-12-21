@@ -4,7 +4,7 @@ Class dbObj{
 	var $servername = "localhost";
 	var $username = "root";
 	var $password = "";
-	var $dbname = "prin";
+	var $dbname = "test";
 	var $conn;
 	function getConnstring() {
 		$con = mysqli_connect($this->servername, $this->username, $this->password, $this->dbname) or die("Connection failed: " . mysqli_connect_error());

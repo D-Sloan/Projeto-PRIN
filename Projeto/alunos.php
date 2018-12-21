@@ -9,14 +9,16 @@
 	{
 		case 'GET':
 			// Buscar uma ID ou Todas
-			if(!empty($_GET["id"]))
+			if(!empty($_GET["table"]) && !empty($_GET["id"]))
 			{
+				$table=($_GET["table"]);
 				$id=intval($_GET["id"]);
-				get_alunos2($id);
+				get_alunos2($table, $id);
 			}
 			else
 			{
-				get_alunos();
+				$table=($_GET["table"]);
+				get_alunos($table);
 			}
 			break;
 
@@ -43,10 +45,10 @@
 			break;
 	}
 
-	function get_alunos()
+	function get_alunos($table)
 	{
 		global $connection;
-		$query="SELECT * FROM aluno";
+		$query="SELECT * FROM .$table";
 		$response=array();
 		$result=mysqli_query($connection, $query);
 		while($row=mysqli_fetch_array($result))
@@ -84,10 +86,10 @@
 		
 	}
 
-	function get_alunos2($id)
+	function get_alunos2($table, $id)
 	{
 		global $connection;
-		$query="SELECT * FROM aluno";
+		$query="SELECT * FROM .$table";
 		if($id != 0)
 		{
 			$query.=" WHERE id=".$id."";
@@ -100,6 +102,8 @@
 		}
 		header('Content-Type: application/json');
 		echo json_encode($response,JSON_PRETTY_PRINT);
+
+
 	}
 
 	function insert_aluno()
@@ -135,7 +139,7 @@
 	function delete_aluno($id)
 	{
 		global $connection;
-		$query="DELETE FROM aluno WHERE id=".$id."";
+		$query="DELETE FROM aluno WHERE id=".$id;
 		if(mysqli_query($connection, $query))
 		{
 			$response=array(
@@ -151,7 +155,7 @@
 			);
 		}
 		header('Content-Type: application/json');
-
+		echo json_encode($response,JSON_PRETTY_PRINT);
 	}
 
 	function update_aluno($id)
