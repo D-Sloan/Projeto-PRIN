@@ -6,11 +6,19 @@ class Banco{
 
 
 	protected function inserirUser($Matricula, $Name, $Cpf, $Email, $Senha, $Tipo){
-		$resultado = substr_replace($Cpf, '.', 3, 0);
-		$resultado = substr_replace($resultado, '.', 7, 0);
-		$resultado = substr_replace($resultado, '-', 11, 0);
+
 		$conn = mysqli_connect("localhost", "root", "", "prin");
-		mysqli_query($conn ,"INSERT INTO user (Matricula, Nome, Cpf, Email, Senha, Tipo) VALUES('$Matricula', '$Name', '$resultado', '$Email', '$Senha', '$Tipo')");
+		$sql = "";
+
+		if($Tipo == 2){
+			$sql == "INSERT INTO T_Professor (MatricProf, Nome, Cpf, Email, Senha) VALUES('$Matricula', '$Name', '$Cpf', '$Email', '$Senha')";
+		}else if($tipo == 3){
+			$sql == "INSERT INTO T_Resp (Cpf, Nome, Email, Senha) VALUES('$Cpf', '$Name',  '$Email', '$Senha')"
+		}else if($tipo == 4){
+			$sql == "INSERT INTO T_Aluno (MatricProf, Nome, Cpf, Email, Senha) VALUES('$Matricula', '$Name', '$Cpf', '$Email', '$Senha')";
+		}
+
+		mysqli_query($conn ,$sql);
 		$this->logar($resultado);
 		mysqli_close($conn);
 	}
