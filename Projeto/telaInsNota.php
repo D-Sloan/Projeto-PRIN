@@ -8,15 +8,13 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title>Tela Atividade Dependente</title>
+		<title>Tela Inserir Notas</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 		<!-- Custom styles for this template -->
 		<link href="css/logo-nav.css" rel="stylesheet">
-		<link href="css/chat.css" rel="stylesheet">
-
 
 	  </head>
 
@@ -63,35 +61,77 @@
 			  $banco->verificarTipo();
 			  ?></h4>
 			  <div class="list-group">
-			  	<a href="telaRespDep.php" class="list-group-item">Menu</a>
+				<a href="telaMenuProf.php" class="list-group-item">Menu</a>
 				<a href="telaChat.php" class="list-group-item">Chat</a>
+				<a href="telaInsAtiv.pp" class="list-group-item">Criar Nova Atividade</a>
+				<a href="#" class="list-group-item">Lista de Presença</a>
 			  </div>
 
 			</div>
 			<!-- /.col-lg-3 -->
 
 			<div class="col-lg-9">
-				<br><br>
-				
 
-				<div id="box-toggle" class="boxmodel">
-					<h2><center>Atividades do Dependente</center></h2>
-					<h3>Matéria: </h3>
-					<div>
-						<p>Data: 18/06</h2>
-						<p>Trabalho de barroco</p>
-					</div>
+				<br>
+				<h2><strong><center>Inserção de Notas</center></strong></h2>
 
-					<h3><br>Matéria: Matemática</h3>
-					<div>
-						<p>Data: 21/05</p>
-						<p>Prova Bimestral - Conteúdos: Logaritmo e Matriz</p>
-					</div>
+				<div id="areaNota">
+					<form action="" method="POST">
+						<br>
+						<p>&nbsp;&nbsp;&nbsp;•Turma:<select name="turma">
+							<option>123</option>
+							<option>321</option>
+						</select></p>
 
+						<table class="table">
+				<thead>
+					<tr>
+					  <th scope="col">Matricula</th>
+					  <th scope="col">Nome</th>
+					  <th scope="col">1B</th>
+					  <th scope="col">2B</th>
+					  <th scope="col">R1</th>
+					  <th scope="col">3B</th>
+					  <th scope="col">4B</th>
+					  <th scope="col">R2</th>
+					  <th scope="col">Média Final</th>
+					</tr>
+					
+				</thead>
 
+				<tbody>
+
+					<tr>
+					  <td>123456</td>
+					  <td>Joel</td>
+					  <td><input type="text" name="notaB1" size="1"></td>
+					  <td><input type="text" name="notaB2" size="1"></td>
+					  <td><input type="text" name="notaR1" size="1"></td>
+					  <td><input type="text" name="notaB3" size="1"></td>
+					  <td><input type="text" name="notaB4" size="1"></td>
+					  <td><input type="text" name="notaR2" size="1"></td>
+					  <td>---</td>
+					</tr>
+
+					<tr>
+					  <td>654321</td>
+					  <td>Doug</td>
+					  <td><input type="text" name="notaB1" size="1"></td>
+					  <td><input type="text" name="notaB2" size="1"></td>
+					  <td><input type="text" name="notaR1" size="1"></td>
+					  <td><input type="text" name="notaB3" size="1"></td>
+					  <td><input type="text" name="notaB4" size="1"></td>
+					  <td><input type="text" name="notaR2" size="1"></td>
+					  <td>---</td>
+					</tr>
+
+				</tbody>
+
+				</table>
+
+						<p><center><input type="submit" value="Inserir Notas"></p></center>
+					</form>
 				</div>
-
-
 
 			</div>
 			<!-- /.col-lg-9 -->
@@ -106,7 +146,6 @@
 		<!-- Bootstrap core JavaScript -->
 		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		
 
 	  </body>
 
