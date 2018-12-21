@@ -34,20 +34,10 @@ th, td{
 	left: 8%;
 	top: 8%;
 	width: 75%;
-	height: 65%;
+	height: 85%;
+  background-color: #fff;
 }
 
-#areaAtiv #formAtiv{
-	position: absolute;
-	
- 	margin-right:5%;
- 	background-color: #fff;
+#areaAtiv p{
+  margin-top: 1%;
 }
-
-#formulario label
-{
-  position:absolute;
-  left:19px;
-  margin-right:5px;
-}
-
